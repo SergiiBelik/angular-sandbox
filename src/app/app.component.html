@@ -1,9 +1,4 @@
-<button (click)="onClick()">Click me</button>
-<P>{{myHero}}</P>
-
-<input (keyup)="print($event)">
-<p>{{display}}</p>
-
-<input #box (keyup)="0">
-
-<p>{{box.value}}</p>
+<input #box (keyUp.enter)="addHero(box.value); box.value=''" (blur)="addHero(box.value); box.value=''"><button (click)="addHero(box.value)">Add</button>
+<ul>
+  <li *ngFor="let hero of heroes">{{hero}}</li>
+</ul>
