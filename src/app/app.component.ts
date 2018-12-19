@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  myHero = ''
+  display = ''
   title = 'angular-sandbox';
+
+  onClick(){
+    this.myHero = 'You my hero!!!'
+  }
+  print(event){
+    this.display += event.key +'|'
+  }
 }
